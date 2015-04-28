@@ -22,6 +22,7 @@ ApplicationWindow {
         title: "Please choose a color"
         currentColor: "#555555"
         Component.onCompleted: {
+            //Bind the currentColor property to the Contoller.Color property
             Ctrl.color = Qt.binding(function() {
                 return colorDialog.currentColor;
             })
